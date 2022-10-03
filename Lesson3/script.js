@@ -119,10 +119,8 @@ console.log("5 задание    -------------Чётные числа от 8 д�
         }else if(number !== 0){
  
          break;
-
         }
          
- 
      } while(number !== 0 && number !== "" )
  
      console.log(count)
