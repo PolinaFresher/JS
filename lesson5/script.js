@@ -30,6 +30,34 @@ function cubedSquared(d) {
 console.log(cubedSquared(d));
 
 
+//3. Напишите функции min и max, которые возвращают меньшее и большее из
+//чисел a и b.
+
+ a = 9
+    b = 8
+    function min(a,b){
+    if (a < b){
+    return a
+    } else {
+    return b
+    }
+    }
+    console.log('Меньшее число из чисел ' + a + ' и ' + b + ' = ' + min(a,b))
+    
+    
+    c = 10
+    d = 11
+    function max(a,b){
+    if (a > b){
+    return a
+    } else {
+    return b
+    }
+    }
+    console.log('Большее число из чисел '+ c + ' и '+ d + ' = '+ max(c,d))
+
+
+
 // 4. Напишите две функции: первая ф-ция должна возвращать массив с
 // числовыми значениями, диапазон которых должен вводиться пользователем
 // с клавиатуры; вторая – выводить полученный массив.
@@ -87,5 +115,28 @@ function isEven(){
 
  console.log(isEven())
 
+ //9. Напишите ф-цию, которая возвращает массив заполненный числами
+//Фибоначи от 0 до 1000.
 
+function getArrFibonachi(){
+    arr9 = []
+    arrfib=[0,1]
+    for(i=0;i <= 1000; i++){
+    arr9.push( i)
+    }
+    
+    x = 0
+    z = 2
+    
+    do{
+    number = arr9[c]
+    if(number == (arrfib[z-1] + arrfib[z-2])){
+       arrfib.push(number)
+       z = z + 1
+    } 
+     x = x+1
+    } while (number < 1000)
+    return arrfib 
+    }
+    console.log(getArrFibonachi())
 
