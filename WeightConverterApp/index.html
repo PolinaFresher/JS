@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="converterApp">
+        <h1>Weight Converter</h1>
+        <div class="inputBox">
+            <form>
+                <input placeholder="Введите число для конвертации" class="inputWeight" type="text">
+                <select name="units" class="units">
+                    <option value="mg">Miligram/Милиграмм</option>
+                    <option value="g">Gram/Гамм</option>
+                    <option value="kg">Kilogram/Килограмм</option>
+                    <option value="t">Ton/Тонна</option>
+                    <option value="st">Stone/Стоун</option>
+                    <option value="lb">Pound(lb)/Фунт</option>
+                    <option value="oz">Ounce(oz)/Унция</option>
+                </select>
+            </form>
+        </div>
+        <h2 class="outputInfo"> &#128070;Start by entering some numbers above.. </h2>
+
+        <dialog class="dialogWindow">
+            <p> Choose convertable unit, then click on an input field of the converter and enter a number. <mark> Only numbers, please!</mark> </p>
+            <button id="close"> Got it! </button>
+          </dialog>
+          <button id="show"> How to use the converter? &#129300; </button>
+          
+    </main>
+    <script src="index.js"></script>
+
+    
+</body>
+
+</html>
+

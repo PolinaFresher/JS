@@ -1,0 +1,130 @@
+    *{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    }
+
+    body {
+    background: radial-gradient(circle, rgba(89,117,255,1) 0%, rgba(252,163,70,1) 100%);;
+    }
+
+    p {
+    margin: 15px 5px 8px 5px;
+    }
+
+    .dialogWindow {
+    margin-top: 60px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-family: monospace;
+    width: fit-content;
+    text-align: center;
+    background-color: rgba(4, 246, 226, 0.093);
+    height: 90px;
+    justify-content: center;
+    }
+
+    #show {
+    position: relative;
+    left: 10%;
+    top: 8%;
+    border-radius: 10%;
+    font-weight: 300;
+    height: 90px;
+    width: 90px;
+    font-size: 17px;
+    animation:bouncy 8s infinite linear;
+    position:relative;
+    background-color: rgba(31, 32, 32, 0.227);
+    color: rgb(255, 255, 255);
+    border: 3px black;
+    }
+
+    @keyframes bouncy {
+    0%{top:0em}
+    20%{top:0em}
+    23%{top:-0.9em}
+    26%{top:0em}
+    28%{top:-0.4em}
+    20%{top:0em}
+    00%{top:0em;}
+    }
+
+    #show:hover {
+    box-shadow: 1px 1.5px 1.5px 1px  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+    }
+
+    #close {
+    border-radius: 1%;
+    background-color: rgb(227, 245, 23);
+    height: 30px;
+    width: 60px;
+    border: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    }
+
+    .converterApp{
+    margin: 0 auto;
+    height: 750px;
+    text-align: center;
+    }
+
+    h1{
+    font-family: fantasy;
+    padding: 10px 0px 40px;
+    font-size: 50px;
+    font-weight: 300;
+    color: white;
+    }
+
+    input{
+    font-family: 'Courier New', Courier, monospace;
+    width:40%;
+    height: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(1, 1, 1);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 30px;
+    outline: none;
+    padding-left: 10px;
+    text-align: center;
+    }
+
+    select{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing:2px;
+    height: 50px;
+    width: 20%;
+    background-color:rgb(255, 255, 255);
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    text-align: center;
+     }
+
+    .outputInfo{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    font-weight:bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 24px;
+    color: rgb(11, 11, 11);
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    text-align: left;
+    min-width:min-content;
+    max-width: max-content;
+    line-height: 2;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 30px;
+    }
