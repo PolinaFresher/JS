@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Montserrat:wght@400;700&family=Oleo+Script&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="budgetApp">
+      <div class="leftContainer">
+        <h2 class="addingExpenses">Add your expenses:</h2>
+        <select name="categories" class="categories">
+          <option disabled>Please select a category below</option>
+          <option value="rent">Rent</option>
+          <option value="groceries">Groceries/Household</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="medical">Medical</option>
+          <option value="utilityBills">Water/Gas/Electrisity</option>
+          <option value="phoneBills">Phone bills</option>
+          <option value="internet">TV/Internet</option>
+          <option value="clothing">Shoes/Clothing</option>
+          <option value="sport">Sport</option>
+          <option value="other">Other Expenses</option>
+        </select>
+
+        <div class="expenses">
+          <input type="text" placeholder="rent" class="expenseName" />
+          <input type="number" placeholder="200$" class="expenseAmount" />
+        </div>
+        <div>
+          <button id="addExpense" class="btnAddExpenses">Add Expense</button>
+        </div>
+      </div>
+
+      <div class="centerContainer">
+        <div class="mainContainer">
+          <h1 class="title">My Monthly Budget</h1>
+        </div>
+
+        <div class="nameApp">
+          <div class="budgetAmmount">
+            <input
+              type="text"
+              class="incomeInput"
+              placeholder="Monthly Income"
+            />
+            <button class="btnInput">Add</button>
+          </div>
+        </div>
+
+        <div class="balanceInfo">
+          <div class="budget">
+            <h2 class="allBudget">Budget: $<span id="budget"></span></h2>
+            <h2 class="allBudgetCalc"><span id="budget"></span></h2>
+          </div>
+          <div class="balance">
+            <h2 class="budgetLeft">Left: $<span id="balance"></span></h2>
+            <h2 class="budgetLeftCalc"><span id="balance"></span></h2>
+          </div>
+        </div>
+
+        <div
+          class="error"
+          style="
+            display: none;
+            color: rgb(109, 11, 8);
+            font-size: 30px;
+            padding-top: 20px;
+          "
+        ></div>
+      </div>
+
+      <div class="rightContainer">
+        <div class="expensesList">
+          <h2 class="mainTitle">My expenses:</h2>
+
+          <h3 class="rent">Rent:</h3>
+          <ul class="rentList"></ul>
+
+          <h3 class="gr">Groceries/Household:</h3>
+          <ul class="grList"></ul>
+
+          <h3 class="ent">Entertainment:</h3>
+          <ul class="entList"></ul>
+
+          <h3 class="med">Medical:</h3>
+          <ul class="medList"></ul>
+
+          <h3 class="wge">Water/Gas/Electrisity:</h3>
+          <ul class="wgeList"></ul>
+
+          <h3 class="phone">Phone bills:</h3>
+          <ul class="phoneList"></ul>
+
+          <h3 class="tv">TV/Internet:</h3>
+          <ul class="tvList"></ul>
+
+          <h3 class="cloth">Shoes/Clothing:</h3>
+          <ul class="clothList"></ul>
+
+          <h3 class="sprt">Sport:</h3>
+          <ul class="sportList"></ul>
+
+          <h3 class="oth">Other Expenses:</h3>
+          <ul class="otherList"></ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
