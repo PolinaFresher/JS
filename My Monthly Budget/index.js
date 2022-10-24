@@ -129,7 +129,7 @@ function saveExspenses(expence,category,expenseStorage){
   localStorage.setItem(category, JSON.stringify(expenseStorage));
 }
 
-//////
+
 function fillExpenceTest(array,field){
   let collectExpenses= ""
   console.log("test1")
@@ -145,7 +145,6 @@ function fillExpenceTest(array,field){
   });
   console.log("test3")
 }
-
 
 
 function loadStorage(){
