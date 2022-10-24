@@ -80,7 +80,8 @@ document.querySelector('.buttons').onclick = (event) => {
                     b = '';
                     sign = '';
                     return;
-                }           
+                }
+           
                 a = a / b;
                 break;
 
@@ -93,7 +94,6 @@ document.querySelector('.buttons').onclick = (event) => {
     }
 
 }
-
 
 
 

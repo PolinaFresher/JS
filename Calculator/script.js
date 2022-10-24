@@ -8,12 +8,10 @@ const six = document.querySelector("#six")
 const seven = document.querySelector("#seven")
 const eigth = document.querySelector("#eigth")
 const nine = document.querySelector("#nine")
-
 const clear = document.querySelector("#clear")
 const percentage = document.querySelector("#percentage")
 const exponent = document.querySelector("#exponent")
 const point = document.querySelector("#point")
-
 const division = document.querySelector("#division")
 const myltiply = document.querySelector("#myltiply")
 const minus = document.querySelector("#minus")
@@ -37,11 +35,7 @@ function addDigits (digits) {
    digits.forEach ( digit => getA(digit))
 }
 
-// //
-// function addDigits (digits) {
-//     digits.forEach ( digit => getB(digit))
-//  }
-//  //
+
 
 function getA(digit) {
     digit.addEventListener("click", function() {
@@ -99,23 +93,6 @@ function getA(digit) {
     }
     })
 }
-//
-// function getB(digit) {
-//     digit.addEventListener("click", function() {
-//         if(display.innerText == 0){
-//             b = digit.innerText
-//             display.innerHTML = b
-//         }
-//         else{
-//             b = display.innerText + digit.innerText
-//             display.innerHTML = b;
-//     }
-//     })
-// }
-
-//
-
-
 
 
 equals.addEventListener("click", function(){
@@ -157,8 +134,6 @@ function printResult(){
     }
     
 }
-
-
 
 
 window.onload = addDigits(digits);
