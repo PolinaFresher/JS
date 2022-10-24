@@ -5,32 +5,6 @@
     // почта), проверка введенной информации, например: проверить возраст – должен быть целым неотрицательным числом больше 18, 
     // вывод информации о конкретном контакте, вывод всех контактов.
 
- 
-     // console.log(contacts.ContactsA_F.contact5)
-
-    // for (let key in contacts.ContactsA_F)
-    // console.log(key + ':'+ contacts.ContactsA_F[key])
-
-
- 
-    // for (a in contacts) {
-    //     console.log(a)
-    //     for (Contact in a) {
-    //         console.log(Contact)
-    //     }
-       
-    // }
-
-    // for (let key in contacts) {
-    //     console.log(key + ' - ' + contacts[key]);
-    // }
-
-    // for (let i = 0; i < contacts.length; i++) {
-    //     contacts = contacts.length[i];
-
-    //     console.log(contacts[i])
-        
-    // }
 
 
     //список контактов
@@ -59,8 +33,19 @@
         ContactsG_M: {contact4,contact7},
         ContactsN_R: {contact6},
         ContactsS_Z: {contact3},
-
     }
+   
+    //    for (let a in contacts) {
+    //     console.log(a)
+    //     for (Contact in a) {
+    //         console.log(Contact)
+    //     }     
+    // }
+
+    //   for (let key in contacts) {
+    //     console.log(key + ' - ' + contacts[key]);
+    // }
+
 
     
 // проверка первого контакта и распределение по группам
@@ -201,9 +186,5 @@ let r = String (contacts.ContactsG_M.contact4.firstName)
    console.log(contacts.ContactsG_M.contact7)
 
 
-
-
-    
-   
-
+   console.log(contacts)
 

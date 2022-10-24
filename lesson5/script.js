@@ -140,3 +140,5 @@ function getArrFibonachi(){
     }
     console.log(getArrFibonachi())
 
+
+    

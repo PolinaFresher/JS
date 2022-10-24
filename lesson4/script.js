@@ -101,6 +101,7 @@ console.log(arr8.reverse())
 let arr9 = [5, 9, 21, , , 9, 78, , , , 6]
 
 for (i = 0; i < arr9.length; i++) {
+   
     if(arr9[i]=== undefined) {
         console.log(arr9[i])
       }
