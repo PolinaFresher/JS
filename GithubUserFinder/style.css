@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+header {
+  background-color: rgb(34, 162, 179);
+  grid-template-columns: 1fr 1fr;
+  height: 120px;
+  display: flex;
+}
+
+.searchUser {
+  margin-left: 10%;
+  margin-right: 29%;
+  width: 43%;
+  height: 50px;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 8px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(255, 255, 255);
+  font-size: 24px;
+  color: #1a717e;
+}
+
+.searchUser:focus {
+  outline: #ffffff00;
+  border: 2px solid rgb(129, 217, 208);
+}
+
+.nameApp {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 10px;
+  margin-top: 20px;
+  color: rgb(58, 58, 61);
+}
+
+img {
+  height: 110px;
+  padding-top: 4.5px;
+  padding-left: 10px;
+}
+
+.detectedUser {
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  min-height: 830px;
+  max-height: 1300px;
+  background: -webkit-linear-gradient(to top, #1a717e, #a0ddea);
+  background: linear-gradient(to top, #1a717e, #c4e0e5);
+  color: rgb(35, 37, 37);
+}
+
+.detectedUser .userAvatar img {
+  border-radius: 5px;
+  height: 300px;
+  width: auto;
+  padding-bottom: 15px;
+}
+
+.userInfo {
+  font-size: 25px;
+  text-align: center;
+  line-height: 55px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-shadow: 1px 1px 0 rgb(35, 37, 37), 1px -1px 0 rgb(35, 37, 37),
+    -1px 1px 0 rgb(35, 37, 37), -1px -1px 0 rgb(35, 37, 37);
+  color: white;
+  transition: all 1s;
+  border-bottom: 2px solid currentColor;
+}
+
+a {
+  text-decoration: none;
+  color: aqua;
+  text-shadow: 0.1em 0.1em 0 rgb(38, 37, 37);
+  font-size: 28px;
+}
