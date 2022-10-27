@@ -1,140 +1,139 @@
-const zero = document.querySelector("#zero")
-const one = document.querySelector("#one")
-const two = document.querySelector("#two")
-const three = document.querySelector("#three")
-const four = document.querySelector("#four")
-const five = document.querySelector("#five")
-const six = document.querySelector("#six")
-const seven = document.querySelector("#seven")
-const eigth = document.querySelector("#eigth")
-const nine = document.querySelector("#nine")
-const clear = document.querySelector("#clear")
-const percentage = document.querySelector("#percentage")
-const exponent = document.querySelector("#exponent")
-const point = document.querySelector("#point")
-const division = document.querySelector("#division")
-const myltiply = document.querySelector("#myltiply")
-const minus = document.querySelector("#minus")
-const plus = document.querySelector("#plus")
-const equals = document.querySelector("#equals")
-const negative = document.querySelector("#negative")
+let a = ""; 
+let b = ""; 
+let operation = "";
+let signForPersentage = ""; 
+let finish = false;
+let result;
 
-let display = document.querySelector('.display')
+const digit = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
+const action = ["-", "+", "x", "/", "+/-", "%", "xy"];
+let display = document.querySelector(".display");
 
 
-let a = 0;
-let b = 0;
-let result = 0;
-let action = "";
+const out = document.querySelector(".screenResult p");
 
-
-
-
-let digits = [zero,one,two,three,four,five,six,seven,eigth,nine,point,negative,percentage,exponent,division,myltiply,minus,plus]
-function addDigits (digits) {
-   digits.forEach ( digit => getA(digit))
+function clearAll() {
+  a = ""; 
+  b = ""; 
+  operation = ""; 
+  finish = false;
+  out.textContent = 0;
 }
 
+document.querySelector("#clear").onclick = clearAll;
+
+document.querySelector(".buttons").onclick = (event) => {
+
+  if (!event.target.classList.contains("btn")) return;
+
+  if (event.target.classList.contains("clear")) out.textContent = "";
+
+  const key = event.target.textContent;
 
 
-function getA(digit) {
-    digit.addEventListener("click", function() {
-        if( display.innerText !== 0 && digit.innerText == '+/-'){
-            a = Number(display.innerText) * (-1)
-            display.innerHTML = Number(a)
-        }
-        else if(display.innerText == 0 && digit.innerText !== '+/-'){
-            a = digit.innerText
-            display.innerHTML = a
-        } else if(display.innerText.includes('.') && digit.innerText == '.') {
-
-        } else if (digit.innerText == '%') {
-            a = Number (display.innerText) / 100;
-            display.innerHTML = a;
-        } else if (digit.innerText == "xy"){
-            a = Number (display.innerText)
-            display.innerHTML = 0
-            action = "xy"
-        } else if (digit.innerHTML == "/"){
-            a = Number (display.innerText);
-            display.innerHTML = 0;
-            action = "/";
-            b = Number (display.innerText);
-            display.innerHTML = 0;
-            
-
-
-        }else if (digit.innerHTML == "x"){
-            a = Number (display.innerText)
-            display.innerHTML = 0
-            action = "X"
-        }else if (digit.innerHTML == "-"){
-            a = Number (display.innerText)
-            display.innerHTML = 0
-            action = "-"
-        }else if (digit.innerHTML == "+"){
-            a = Number (display.innerText)
-            display.innerHTML = 0
-            action = "+"
-        // } else if (action == ""){
-        //     console.log("1111111")
-        //     a = display.innerText + digit.innerText
-        //     display.innerHTML = a;
-        // }else if (action !== ""){
-        //     console.log("222")
-        //     b = display.innerText + digit.innerText
-        //     display.innerHTML = b;
-        // }
+  if (digit.includes(key)) {
+    if (b === "" && operation === "") {
+      if (String(a).includes(".") && key === ".") {
+      } else if (
+        !String(a).includes(".") &&
+        key === "0" &&
+        String(a)[0] == "0"
+      ) {
+      } else {
+        a += key;
+        out.textContent = a;
+      }
+    } else if (a !== "" && b !== "" && finish) {
+      b = key;
+      finish = false;
+      out.textContent = b;
     } else {
-        a = display.innerText + digit.innerText
-            display.innerHTML = a;
-
-
+      if (String(b).includes(".") && key === ".") {
+      } else if (key === "." && operation == "xy") {
+      } else {
+        b += key;
+        out.textContent = b;
+      }
     }
-    })
-}
+    console.table(a, b, operation);
+    signForPersentage = operation;
+    return;
+  }
 
 
-equals.addEventListener("click", function(){
-    printResult();
-})
-
-function printResult(){
-    if (action == "xy"){
-        b = display.innerText
-        result = Math.pow(Number(a),Number(b))
-        display.innerHTML = result;
-        console.log(a)
-        console.log(b)
-    } else if (action == "/"){
-        b = display.innerText
-        result = Number(a) / Number(b)
-        display.innerHTML = result;
-        console.log(a)
-        console.log(b)
-    }else if (action == "x"){
-        b = display.innerText
-        result =Number(a) * Number(b)
-        display.innerHTML = result;
-        console.log(a)
-        console.log(b)
-    }else if (action == "-"){
-        b = display.innerText
-        result =Number(a) - Number(b)
-        display.innerHTML = result;
-        console.log(a)
-        console.log(b)
-    }else if (action == "+"){
-        b = display.innerText
-        console.log(action)
-        console.log(a)
-        console.log(b)
-        result =Number(a) + Number(b)
-        display.innerHTML = result;
+  if (key == "%") {
+    operation = key;
+    console.table(a, b, signForPersentage, operation);
+    return;
+  } else if (key == "+/-") {
+    if (out.textContent == a) {
+      a = Number(a) * -1;
+      out.textContent = a;
+    } else {
+      b = Number(b) * -1;
+      out.textContent = b;
     }
-    
-}
+  } else if (action.includes(key)) {
+    operation = key;
+    out.textContent = operation;
+    console.table(a, b, operation);
+    return;
+  }
 
 
-window.onload = addDigits(digits);
+  if (key === "=") {
+    if (b === "") b = a;
+    switch (operation) {
+      case "+":
+        result = +a + +b;
+        break;
+      case "-":
+        result = a - b;
+        break;
+      case "x":
+        result = a * b;
+        break;
+      case "/":
+        if (b === "0") {
+          out.textContent = "Error";
+          a = "";
+          b = "";
+          operation = "";
+          return;
+        }
+        result = a / b;
+        break;
+      case "xy":
+        result = Math.pow(a, b);
+        break;
+      case "%":
+        let percentValue = a / 100;
+        let percentResult = percentValue * b;
+        if (signForPersentage == "+") {
+          result = Number(a) + Number(percentResult);
+          break;
+        } else if (signForPersentage == "-") {
+          result = Number(a) - Number(percentResult);
+          break;
+        }
+    }
+    finish = true;
+    out.textContent = result;
+    console.table(a, b, operation, signForPersentage);
+  }
+};
 
+const observer = new MutationObserver(function (mutations) {
+  if (a.toString().length > 7 && a.toString().length <= 9) {
+    out.style.fontSize = "5rem";
+  } else if (a.toString().length > 9) {
+    out.textContent = "Error";
+  } else if (b.toString().length > 7 && b.toString().length <= 9) {
+    out.style.fontSize = "5rem";
+  } else if (b.toString().length > 9) {
+    out.textContent = "Error";
+  } else {
+    out.style.fontSize = "7rem";
+  }
+});
+observer.observe(out, { childList: true });
