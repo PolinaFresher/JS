@@ -1,6 +1,6 @@
-  const questions = {
+const questions = {
   '1. Inside which HTML element do we put the JavaScript?':
-  [[ ' < script > ',' < javascript > ',' < scripting > ',' < js > '], ' < script > '],
+  [[ ' < script > ',' < javascript > ',' < scripting > ',' < js > '], '< script >'],
 
   '2. How do you write "Hello World" in an alert box?':
   [[ 'alert("Hello World");','alertBox("Hello World");','msgBox("Hello World");','msg("Hello World");'],'alert("Hello World");'],
@@ -47,105 +47,95 @@
 
   };
 
-  // console.log(Object.values(questions)[0][0][0])
-
   const keys = Object.keys(questions);
   const values = Object.values(questions);
-  
-  const question = document.querySelector("#question");
   const correct = document.querySelector("#correct");
-  const answers = document.querySelector("#answers");
   const btnStart = document.querySelector(".buttonStart");
   const appName = document.querySelector(".appName");
-  const questionsLeft = document.querySelector(".questionsLeft");
+  const quiz = document.querySelector(".quizApp");
   
+  let count = 0;
+  let score = 0;
 
   btnStart.addEventListener('click', function() {
       startQuiz()
-      
     });
 
   function startQuiz(){
-    let quiz = document.querySelector(".quizApp");
     quiz.style.display = "block";
-    btnStart.style.display = "none";
     appName.style.display = "none";
-    
+    btnStart.style.display= "none";
+    addQuestion()
+    addAnswers()
+    addQustionCounter()
+    changeQuestion();
   }
-
-  let count = -1;
-  let score = 0;
-  
-  
-  function init() {
-    makeQuestionListeners();
-    makeNewQuestions();
-  }
-  
-  window.onload = init;
-  
-  
-  function makeQuestionListeners() {
-  
-
+  function changeQuestion() {
+    const answers = document.querySelector("#answers");
     for (let div of answers.children) {
-      div.addEventListener("click", () => {
-        console.log(div.textContent)
-        console.log(values[count][1])
-        makeNewQuestions(div);
+      div.addEventListener("click", function (event){
+        if (event.target.innerText === values[count][1]) {
+          score++;
+        }
+        count++;
+        makeNewQuestions();
       });
     }
   }
  
-  function makeNewQuestions(div) {
-    questionsLeft.innerHTML = count+2  + "/15"
-    
-    if (div && div.textContent === values[count][1]) {
-      console.log(score)
-      console.log( true)
-      
-      score++;
-    }
-   
-
-    if (count == keys.length - 1) {
+  function makeNewQuestions() {
+    document.querySelector("#question").remove();
+    document.querySelector("#answers").remove();
+    if (count == keys.length) {
       makeScore();
       return;
     }
-    
-    count++;
-    question.innerHTML = keys[count];
-    for (let i = 0; i < values[0][0].length; i++) {
-      let answer = values[count][0][i];
+    addQuestion()
+    addAnswers()
+    addQustionCounter()
+    changeQuestion()
+  }
 
+  function addQustionCounter(){
+    const questionCounter = document.createElement('div');
+    questionCounter.innerText = count + 1 + "/15";
+    questionCounter.className = "questionsLeft";
+    const answers = document.querySelector("#answers");
+    answers.append(questionCounter);
+  }
 
-      //
-      if (answer == undefined){
-        answers.children[i].style.display = 'none'
-      } else{
-        if (answers.children[i].style.display = 'none'){
-          answers.children[i].style.display = 'block'
-        }
+  function addQuestion(){
+    const question = document.createElement('div');
+    question.innerText = keys[count];
+    question.className = "question"
+    question.id = 'question';
+    quiz.append(question);
+  }
 
-        answers.children[i].innerHTML = values[count][0][i];
-      }     
-    }
+  function addAnswers(){
+    const answerList = document.createElement('div');
+    answerList.className = "answers"
+    answerList.id = 'answers';
+    quiz.append(answerList);
+    const answers = document.querySelector("#answers");
+    values[count][0].forEach((element) =>{
+      const answer = document.createElement('div');
+      answer.className = "answer"
+      answer.innerText = element;
+      answers.append(answer); 
+    })
   }
 
   function endQuiz(){
-    let quiz = document.querySelector(".quizApp");
-    quiz.style.display = "none";
-    btnStart.style.display = "none";
+    document.querySelector(".questionsLeft").style.display = "none";
+    document.querySelector(".quizApp").style.display = "none";
     appName.style.display = "block";
     correct.style.padding = "15% 0 0 0";
     appName.style.padding = "5% 0 0 0";
     correct.style.animation= "correct 2s ease-out";
-    
   }
   
   function makeScore() {
-     endQuiz()
-    correct.innerHTML = `Your score: ${score}/${keys.length}`
-    questionsLeft.innerHTML = count+1  
-    
+    endQuiz()
+    correct.innerHTML = `Your score: ${score}/${keys.length}` 
   }
