@@ -25,13 +25,11 @@
         if (searchMovie.value === ""){movieList.innerHTML = ''}
         aboveMovies.style.display ="none"
         movieList.style.display ="none"
-        glass.style.display = "block";
       };
 
-    function getMovies(movieName, page) {
-    aboveMovies.style.display = "flex";
-
-    showResult(page);
+    function getMovies(movieName) {
+     showResult(page);
+     
     fetch(`${API_URL}?apiKey=${API_KEY}&s=${movieName}&page=${page}`).then(
         (response) => {
         response.json().then((response) => {
@@ -43,6 +41,7 @@
             nextPage.style.display = "none";
             }
             if(movies != undefined) {
+            aboveMovies.style.display = "flex";
             showMovies(movies);
             }
             if (page > 1) {
