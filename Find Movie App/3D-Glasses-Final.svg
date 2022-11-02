@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" id="svg2" viewBox="0 0 512 512" version="1.1" inkscape:version="0.91 r13725">
+  <defs id="defs4">
+    <linearGradient id="linearGradient4609">
+      <stop id="stop4611" style="stop-color:#ffffff" offset="0"/>
+      <stop id="stop4613" style="stop-color:#323232;stop-opacity:0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4587" y2="685.22" gradientUnits="userSpaceOnUse" x2="117.14" gradientTransform="matrix(.64859 0 0 .50443 221.87 407.9)" y1="813.79" x1="280">
+      <stop id="stop3638" style="stop-color:#ff0000" offset="0"/>
+      <stop id="stop3640" style="stop-color:#ff6464" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4590" y2="685.22" gradientUnits="userSpaceOnUse" x2="117.14" gradientTransform="matrix(.64859 0 0 .50443 5.2693 408.73)" y1="813.79" x1="280">
+      <stop id="stop3592" style="stop-color:#0000ff" offset="0"/>
+      <stop id="stop3594" style="stop-color:#6464ff" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4607" y2="699.65" xlink:href="#linearGradient4609" gradientUnits="userSpaceOnUse" x2="143.36" y1="699.65" x1="61.286"/>
+    <linearGradient id="linearGradient4621" y2="161.64" xlink:href="#linearGradient4609" gradientUnits="userSpaceOnUse" x2="420.5" y1="161.64" x1="304.5"/>
+  </defs>
+  <g id="layer1" transform="translate(0 -540.36)">
+    <path id="path4582" style="stroke:#000000;stroke-width:1px;fill:url(#linearGradient4607)" d="m63.68 734.29c20.425-25.654 39.143-49.062 64.535-69.643 9.4531 15.119 10.288 29.524 14.643 44.286-2.4884 11.633-6.0243 13.419-10.893 2.6786-3.449-9.7024-2.1455-8.869-4.1071-18.393-6.8097 8.5243-16.203 18.371-22.143 24.286 0.91049 5.7143-0.55447 11.429-1.4286 17.143l-40.606-0.35713z"/>
+    <path id="path4584" style="stroke:#000000;stroke-width:1px;fill:url(#linearGradient4621)" d="m419.75 193.59-96.18-65.16c-12.29 10.65-15.61 24.9-18.57 39.28 4.7619 23.959 9.5238 10.394 14.286 5.7143l3.5714-17.857 30 26.429 8.4489 12.265" transform="translate(0 540.36)"/>
+    <path id="rect4543" style="stroke:#000000;stroke-width:2;fill:#e6e6e6" d="m63.619 734.52v107.5h124.62c7.8488-20.454 28.667-35.079 53.113-35.079s45.264 14.625 53.113 35.079h125.14v-107.5h-355.98z"/>
+    <rect id="rect2816" style="fill:url(#linearGradient4590)" rx="13.248" ry="10.409" height="64.855" width="105.63" y="754.37" x="81.248"/>
+    <rect id="rect2816-9" style="fill:url(#linearGradient4587)" rx="13.248" ry="10.409" height="64.855" width="105.63" y="753.55" x="297.85"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>3D Glasses</dc:title>
+        <dc:date>2010-06-30T04:19:33</dc:date>
+        <dc:description>Here an icon I made, depicting a set of Red&amp;Blue glasses. Enjoy!</dc:description>
+        <dc:source>https://openclipart.org/detail/69307/3d-glasses-by-marricklip14</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>marricklip14</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>3D</rdf:li>
+            <rdf:li>Anaglyph</rdf:li>
+            <rdf:li>Cellophane</rdf:li>
+            <rdf:li>Glasses</rdf:li>
+            <rdf:li>Nerdy.</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

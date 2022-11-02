@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  overflow-y: hidden;
+}
+
+body {
+  background: aliceblue url(SL-121019-25870-21.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: rgb(190, 6, 68);
+  height: 110px;
+  display: flex;
+}
+
+.searchMovie {
+  margin-left: 16%;
+  margin-right: 23%;
+  width: 40%;
+  height: 50px;
+  margin-top: 25px;
+  padding-left: 10px;
+  padding-right: 8px;
+  border-radius: 10px;
+  border: none;
+  background: aliceblue;
+  font-size: 24px;
+  color: rgb(8, 8, 168);
+}
+
+.searchMovie:focus {
+  outline: #ffffff00;
+  border: 3px solid rgb(9, 65, 198);
+}
+
+.nameApp {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 28px;
+  padding-left: 10px;
+  margin-top: 15px;
+  color: aliceblue;
+}
+
+.pageBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(190, 6, 68);
+}
+
+.moviesList {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-row-gap: 30px;
+}
+
+#movie-img {
+  width: 300px;
+  height: 405px;
+}
+
+#movie-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#page {
+  font-size: 30px;
+  text-align: center;
+}
+
+.movie {
+  color: rgb(8, 8, 168);
+  text-align: center;
+}
+
+.allMovieInfo {
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 30px;
+  line-height: 45px;
+  background-color: #585d5ddb;
+  color: rgb(248, 248, 248);
+  width: 50%;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 0px 10px 3px rgb(0, 0, 0);
+}
+
+.posterImg {
+  padding-right: 1px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0px 0px 10px 3px rgb(0, 0, 0);
+}
+
+#close {
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #424141;
+  color: aliceblue;
+  font-weight: bold;
+  border-radius: 20%;
+  border: none;
+}
+
+.movieTitle {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#movie-info {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  position: fixed;
+  left: 25%;
+  z-index: 9999;
+  top: 20%;
+  height: max-content;
+}
+
+.glasses {
+  height: 300px;
+  width: auto;
+  padding-left: 90px;
+  padding-bottom: 5px;
+  position: fixed;
+  bottom: 3%;
+  animation: gettingBigger 12s infinite;
+}
+
+@keyframes gettingBigger {
+  50% {
+    transform: scale(2.5);
+  }
+}
