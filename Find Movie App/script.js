@@ -34,7 +34,6 @@
         (response) => {
         response.json().then((response) => {
             let movies = response.Search;
-
             if (response.totalResults >= 8) {
             nextPage.style.display = "flex";
             } else {
@@ -92,7 +91,7 @@
         <div class="movieRating"> <span class="description"> Rating IMBD: </span> ${response.Ratings[0].Value} </div>
         <div class="movieInfoText"> <span class="description"> Release date: </span>${response.Released}
         <div class="movieInfoText"> <span class="description"> Genre: </span>${response.Genre}</div>   
-        <div class="movieInfoText"> <span class="description">Plot: ${response.Plot}</span>  </div>
+        <div class="movieInfoText"> <span class="description"> Plot: </span> ${response.Plot} </div>
         </div>
         `;
         const closeBtn = document.querySelector("#close");
