@@ -100,6 +100,7 @@
             movieInformation.style.display = "none";
             movieList.style.filter = "blur(0)";
             movieList.style.opacity = "1";
+            aboveMovies.style.display ="flex";
         });
         });
     });
