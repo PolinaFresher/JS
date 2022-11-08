@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
- <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h2 class="title">Password Generator</h2>
-        <div class="result">
-            <div class="result__title field-title">Generated Password</div>
-            <button class="btnCopy"> Copy </button>
-        </div>
-        <div class="lengthSlider" data-min="4" data-max="32">
-            <div class="lengthSlider" data-length='0'>Length:</div>
-            <input id="slider" type="range" min="4" max="32" value="16" />
-        </div>
-    
-        <div class="settings">
-            <span class="settings__title field-title">settings</span>
-            <div class="setting">
-                <input type="checkbox" id="uppercase" checked />
-                <label for="uppercase">Include Uppercase</label>
-            </div>
-            <div class="setting">
-                <input type="checkbox" id="lowercase" checked />
-                <label for="lowercase">Include Lowercase</label>
-            </div>
-            <div class="setting">
-                <input type="checkbox" id="number" checked />
-                <label for="number">Include Numbers</label>
-            </div>
-            <div class="setting">
-                <input type="checkbox" id="symbol" />
-                <label for="symbol">Include Symbols</label>
-            </div>
-        </div>
-    
-        <button class="btnGenerate" id="generate">Generate Password</button>
-    </div>
-    
-    <script src="main.js"></script>
-</body>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Password Generator</h1>
+
+      <div class="result-container"></div>
+      <!-- <input id="password" type="text" placeholder="Generated Password"readonly > -->
+      <textarea id="password" readonly> </textarea>
+      <button class="btnCopy" id="btnCopy">Copy</button>
+
+      <div class="lengthPassword">
+        <p>Password length</p>
+        <input type="number" id="length" min="6" max="25" value="20" />
+      </div>
+
+      <div class="options">
+        <label class="option" for="uppercase"
+          >Include Uppercase
+          <input type="checkbox" id="uppercase" class="checkbox"/>
+          <div class="checkmark"></div>
+        </label>
+        <label class="option" for="lowercase"
+          >Include Lowercase
+          <input type="checkbox" id="lowercase"  class="checkbox"/>
+          <div class="checkmark"></div>
+        </label>
+        <label class="option" for="number"
+          >Include Numbers
+          <input type="checkbox" id="number"  class="checkbox"/>
+          <div class="checkmark"></div>
+        </label>
+        <label class="option" for="symbol"
+          >Include Symbols
+          <input type="checkbox" id="symbol"  class="checkbox"/>
+          <div class="checkmark"></div>
+        </label>
+      </div>
+      
+      <button class="btnGenerate" id="generateBtn">Generate Password</button>
+    </main>
+    <img  src="icons8-arrow-64.png" alt="arrow" class="arrow" style="display:none">
+  </body>
+  <script src="script.js"></script>
 </html>

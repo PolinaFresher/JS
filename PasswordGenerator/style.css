@@ -1,141 +1,264 @@
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "StickNoBills";
+  font-weight: normal;
+  user-select: none;
 }
+
+@font-face {
+  font-family: "StickNoBills";
+  src: url(StickNoBills-VariableFont_wght.ttf);
+  font-weight: normal;
+}
+
 body {
-background-color:#FFF5F7;
-display: flex;
-justify-content: center;
-align-items: center;
+  background-color: #f8e1e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-height: 100vh;
 }
+
+.main {
+  background-color: #f7a7cc;
+  box-shadow: 0px 2px 10px rgb(165 56 189 / 56%);
+  padding: 20px;
+  max-height: 900px;
+  min-height: 500px;
+  max-width: 70%;
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 5%;
+}
+
+/* input:read-only */
+
+#password {
+  word-wrap: break-word;
+  letter-spacing: 2px;
+  cursor: none;
+  width: 80%;
+  height: 50px;
+  border: 3px solid black;
+  background-color: transparent;
+  font-size: 30px;
+  color: #0566ed;
+  align-items: center;
+  padding-top: 1%;
+  border-image: conic-gradient(
+      from var(--angle),
+      rgb(226, 104, 228),
+      rgb(146, 119, 228),
+      rgb(91, 132, 227)
+    )
+    1;
+  animation: 5s rotate linear infinite;
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+  cursor: none;
+}
+
+#password:focus {
+  outline: none;
+  cursor: none;
+  animation: 3s rotate linear infinite;
+  border-image: conic-gradient(
+      from var(--angle),
+      rgb(226, 104, 228),
+      rgb(146, 119, 228),
+      rgb(91, 132, 227)
+    )
+    1;
+}
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.result-container {
+  text-align: center;
+}
+
 button {
-border: 0;
-outline: 0;
+  border: 0;
+  outline: 0;
 }
 
 .btnCopy {
-width: 100px;
-height: 40px;
-background-color: #0d68e8;
-margin-top: 25%;
-color: #f7a7cc;
-font-weight: 300;
-letter-spacing: 0.5px;
-font-size: 18px;
+  width: 100px;
+  height: 40px;
+  background-color: #0d68e8;
+  margin-bottom: 15px;
+  color: #f7a7cc;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  margin: 20px 0 30px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btnCopy :hover {
+  transform: translateY(-2px);
 }
 
+.btnCopy:active {
+  transform: translateY(-4px);
+  box-shadow: inset 0 0 3px rgba(236, 112, 219, 0.593),
+    0 0 7px 2px rgba(210, 10, 213, 0.356);
+}
 
 .title {
-text-align: center;
-font-family: "Montserrat";
-font-size: 45px;
-color:#0d68e8;
+  text-align: center;
 
+  font-size: 4rem;
+  color: #0d68e8;
+  padding-bottom: 20px;
+
+  font-weight: 500;
 }
-
-.container {
-margin-top: 10%;
-width: 50%;
-height: 70%;
-padding: 10px 25px;
-background:#FDDFEC;
-border-radius: 10px;
-box-shadow: 0 0 5px rgba(255, 255, 255, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
-font-family: "Montserrat";
-display: flex;
-flex-direction: column;
-align-content: center;
-justify-content: center;
-align-items: center;
-
-}
-
 
 label {
-font-family: "Montserrat";
-color: #0d68e8;
-letter-spacing: 1px;
-padding-left: 5px;
+  color: #0d68e8;
+  letter-spacing: 2px;
 }
-
 
 .result {
-
-height: 95px;
-
-
+  height: 95px;
 }
 
+.lengthPassword {
+  display: flex;
+  align-items: center;
+  color: #0d68e8;
+  letter-spacing: 1px;
+}
 
-.field-title {
-position: absolute;
-top: -10px;
-left: 8px;
-transform: translateY(-50%);
-font-weight: 800;
-color: rgba(255, 255, 255, 0.5);
-text-transform: uppercase;
-font-size: 0.65rem;
-pointer-events: none;
-user-select: none;
+p {
+  padding-right: 10px;
+  font-size: 26px;
+}
+
+#length {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.201);
+  text-align: center;
+  border: none;
+  width: 40px;
+  height: 30px;
+  font-size: large;
+}
+#length,
+input:active {
+  border: none;
+  color: #0566ed;
+}
+
+.btnGenerate {
+  user-select: none;
+  width: 50%;
+  height: 50px;
+  margin: 10px 0;
+  color: #f8f8f8;
+  border-radius: 10px;
+  /* background-color: #FFCFE5; */
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  z-index: 1;
+}
+
+.btnGenerate:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 3px rgba(214, 74, 196, 0.483),
+    0 0 7px 2px rgba(10, 88, 213, 0.738);
+}
+
+.btnGenerate:active {
+  transform: translateY(-4px);
 }
 
 .options {
-width: 100%;
-height: auto;
-margin: 50px 0;
-}
-.lengthSlider {
-margin-left: 10px;
-display: flex;
-margin: 30px 0;
-align-items: center;
-font-size: 20px;
-font-family: "Montserrat";
-color: #0d68e8;
-letter-spacing: 1px;
-padding-right: 15px;
-
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0 65px 0px;
 }
 
-
-.btnGenerate {
-user-select: none;
-width: 50%;
-height: 50px;
-margin: 10px 0;
-color:#0d68e8;
-
-background-color: #FFCFE5;
-letter-spacing: 1px;
-font-weight: bold;
-text-transform: uppercase;
-cursor: pointer;
-
+.option {
+  display: block;
+  height: 2.2em;
+  width: 2.2em;
+  cursor: pointer;
+  position: relative;
+  font-size: 15px;
+  margin: 10px 50px 10px 50px;
 }
 
-.btnGenerate.button4:hover{
-border-color: rgb(153, 31, 31);
+.option input {
+  position: absolute;
+  transform: scale(0);
 }
 
-
-.support{
-position: fixed;
-right: 10px;
-bottom: 10px;
-padding: 10px;
-display: flex;
+.option input:checked ~ .checkmark {
+  transform: rotate(45deg);
+  height: 2em;
+  width: 0.7em;
+  border-color: #0566ed;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
 }
 
-a{
-margin: 0 20px;
-color: #fff;
-font-size: 2rem;
-transition: all 400ms ease;
+.option .checkmark {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #0566ed;
+  border-radius: 4px;
+  transition: all 0.3s;
 }
 
-a:hover{
-color: #222;
+.reminder {
+  color: #f441a5;
+  position: absolute;
+  top: 10%;
 }
 
+.arrow {
+  position: fixed;
+  left: 20%;
+  top: 60%;
+  animation: slide1 1s ease-in-out infinite;
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(100px, 0);
+  }
+}
