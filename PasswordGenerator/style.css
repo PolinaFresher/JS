@@ -262,3 +262,25 @@ input:active {
     transform: translate(100px, 0);
   }
 }
+
+.copied {
+color: #ffffff;
+background-color:#0566ed;
+align-items: center;
+position: absolute;
+font-size: 20px;
+top: 10%;
+width: 250px;
+height: 50px;
+line-height: 45px;
+color: white;
+text-align: center;
+border-radius: 10px;
+animation: fade 3s ease forwards;
+
+ }
+
+ @keyframes fade { from { opacity: 1; visibility: visible; } to { opacity: 0; visibility: hidden; } }
+
+
+

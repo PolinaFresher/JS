@@ -36,6 +36,7 @@ generateButton.addEventListener("click", () => {
     );
   }
 
+
   function reminder() {
     let div = document.createElement("div");
     div.className = "reminder";
@@ -96,11 +97,32 @@ function getRandomSymbol() {
 let btn = document.querySelector("#btnCopy");
 let text = document.querySelector("#password");
 
+
 btn.addEventListener("click", () => {
   text.disabled = false;
   text.select();
   text.setSelectionRange(0, 99999);
   document.execCommand("copy");
+  copyButton.onclick = box.style.display="block"
   document.getSelection().removeAllRanges();
-  text.disabled = true;
+  text.disabled = true; 
+
+ 
 });
+
+
+const alert = document.createElement("div")
+
+function copied() {
+  
+if (result.innerHTML == ' ') {
+  alert.style.display="none"
+} else {
+  alert.style.display="block"
+  alert.classList.add("copied"); 
+  alert.textContent = "Password copied to clipboard!" 
+  document.body.appendChild(alert)
+}
+
+}
+

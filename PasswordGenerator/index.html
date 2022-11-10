@@ -11,12 +11,10 @@
   <body>
     <main class="main">
       <h1 class="title">Password Generator</h1>
-
       <div class="result-container"></div>
       <!-- <input id="password" type="text" placeholder="Generated Password"readonly > -->
       <textarea id="password" readonly> </textarea>
-      <button class="btnCopy" id="btnCopy">Copy</button>
-
+      <button class="btnCopy" id="btnCopy"  onclick="copied()">Copy</button>
       <div class="lengthPassword">
         <p>Password length</p>
         <input type="number" id="length" min="6" max="25" value="20" />
