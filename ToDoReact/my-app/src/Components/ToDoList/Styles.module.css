@@ -1,0 +1,33 @@
+li:first-child {
+  margin-top: 40px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  cursor: pointer;
+}
+
+li {
+  transition: background-color 0.1s;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #7609ac;
+  font-weight: 500;
+  font-size: 30px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-align: left;
+  border: 2px dashed #7c0bcc;
+  border-radius: 10px;
+  background-color: #edf3c7;
+  transition: background-color 0.5s;
+}
+
+.react-icons {
+  padding-right: 50px;
+}
