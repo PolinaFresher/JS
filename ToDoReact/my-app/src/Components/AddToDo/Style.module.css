@@ -1,0 +1,82 @@
+button {
+  background-color: rgb(0, 103, 162);
+  color: #ffffff;
+  text-shadow: 3px 0 3px #02103e;
+  width: 70px;
+  height: 55px;
+  margin-left: 2%;
+  border-radius: 10px;
+  border: 3px solid rgb(4, 157, 215);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+button:hover {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+input {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(4, 156, 215);
+  min-width: 17%;
+  max-width: 30%;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 103, 162);
+  padding-left: 5px;
+  margin-left: 4%;
+}
+
+input::placeholder {
+  color: #ffffff;
+  text-shadow: 3px 0 3px #02103e;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input:focus,
+input:hover {
+  padding-left: 5px;
+  outline: 3px solid transparent;
+}

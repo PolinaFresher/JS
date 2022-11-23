@@ -1,0 +1,38 @@
+li:first-child {
+  margin-top: 1%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
+  margin-bottom: 15px;
+  height: 20px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  width: 24%;
+  margin-left: 40%;
+  margin-right: auto;
+  border: 2px dashed #0b6fcc;
+  border-radius: 10px;
+  background-color: rgba(174, 219, 247, 0.363);
+}
+
+.toDo {
+  color: rgb(6, 82, 126);
+}
+.completed {
+  color: rgba(0, 103, 162, 0.552);
+  text-decoration: line-through wavy rgb(234, 94, 92);
+}
+
+.iconIncomplete {
+  color: rgb(51, 163, 105);
+}
+.iconComplete {
+  color: rgb(234, 94, 92);
+}

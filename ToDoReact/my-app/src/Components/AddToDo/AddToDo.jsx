@@ -1,29 +1,39 @@
-import React, { useState } from 'react';
-import  "./Styles.module.css"
+import React, { useState } from "react";
+import "./Style.module.css";
 
+function AddToDo({ setTodos }) {
+  const [inputValue, setValue] = useState("");
 
-function AddToDo ({setTodos}) {
-    const [inputValue,setValue] = useState('');
-    
-    const addTodo = () =>{
-        setTodos((pre) => [...pre, {id: Math.random().toFixed(2), title:inputValue}])
-        setValue('')
+  const addTodo = () => {
+    if (inputValue.trim()) {
+      setTodos((pre) => [...pre, inputValue]);
+      setValue("");
     }
-    const change = (event) => {
-        setValue(event.target.value)
-    }
-    return (
-    <div className='addToDos'style={{ 
+  };
+  const change = ({ target }) => {
+    setValue(target.value);
+  };
+  return (
+    <div
+      className="addToDo"
+      style={{
+        zIndex: "999",
         display: "flex",
-        textAlign: "center",
         alignItems: "center",
         justifyContent: "center",
-        paddingTop: "20%"
-
-    }}>
-      <input value={inputValue} onChange={change} type="text" placeholder = "What needs to be done?"  id='input'></input>
+        alignContent: "center",
+        paddingTop: "5%",
+      }}
+    >
+      <input
+        value={inputValue}
+        onChange={change}
+        type="text"
+        placeholder="What needs to be done?"
+        id="input"
+      ></input>
       <button onClick={addTodo}>Add</button>
-      </div>
-    )
+    </div>
+  );
 }
-export default AddToDo
+export default AddToDo;

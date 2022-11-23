@@ -1,35 +1,42 @@
 import React, { useState } from "react";
-import "./Styles.module.css";
-import { FcEmptyTrash } from "react-icons/fc";
+import "./Style.module.css";
+import styles from "./Style.module.css";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { IoTrashBin } from "react-icons/io5";
 
-function ToDoList({ Todos, SetToDos }) {
-  const removeTodo = (event) => {
-    SetToDos(
-      [...Todos].filter(function (item) {
-        return item.id !== event.nativeEvent.path[2].attributes[0].value;
-      })
-    );
+function ToDoList({ value, setTodo, index }) {
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  const completed = () => {
+    setIsCompleted((pre) => !pre);
+  };
+
+  const removeTodo = () => {
+    setTodo((pre) => pre.filter((_, id) => id !== index));
   };
 
   return (
-    <ul>
-      {Todos.map((todo) => {
-        return (
-          <li key={todo.id} id={todo.id}>
-             <FcEmptyTrash
-                className="icon"
-                style={{
-                paddingRight: "20px",
-                paddingLeft: "10px",
-                cursor: "pointer",
-              }}
-              onClick={removeTodo}
-            />
-            {todo.title}
-          </li>
-        );
-      })}
-    </ul>
+    <li id={index}>
+      <IoTrashBin
+        className="icon"
+        style={{
+          color: "rgb(6, 82, 126)",
+          cursor: "pointer",
+        }}
+        onClick={removeTodo}
+      />
+      <i className={isCompleted ? styles.iconComplete : styles.iconIncomplete}>
+        <IoCheckmarkCircleOutline
+          style={{
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            cursor: "pointer",
+          }}
+          onClick={() => completed()}
+        />
+      </i>
+      <i className={isCompleted ? styles.completed : styles.toDo}>{value}</i>
+    </li>
   );
 }
 
